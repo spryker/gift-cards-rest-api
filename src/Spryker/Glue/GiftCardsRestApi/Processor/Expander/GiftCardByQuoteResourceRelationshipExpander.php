@@ -38,6 +38,8 @@ class GiftCardByQuoteResourceRelationshipExpander implements GiftCardByQuoteReso
         foreach ($resources as $resource) {
             /** @var \Generated\Shared\Transfer\QuoteTransfer|null $payload */
             $payload = $resource->getPayload();
+
+            /** @phpstan-ignore instanceof.alwaysTrue */
             if ($payload === null || !($payload instanceof QuoteTransfer)) {
                 continue;
             }
