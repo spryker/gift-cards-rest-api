@@ -19,9 +19,6 @@ class GiftCardByQuoteResourceRelationshipExpander implements GiftCardByQuoteReso
      */
     protected $giftCardRestResponseBuilder;
 
-    /**
-     * @param \Spryker\Glue\GiftCardsRestApi\Processor\RestResponseBuilder\GiftCardRestResponseBuilderInterface $giftCardRestResponseBuilder
-     */
     public function __construct(GiftCardRestResponseBuilderInterface $giftCardRestResponseBuilder)
     {
         $this->giftCardRestResponseBuilder = $giftCardRestResponseBuilder;

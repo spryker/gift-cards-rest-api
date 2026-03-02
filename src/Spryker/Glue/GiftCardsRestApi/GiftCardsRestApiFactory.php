@@ -18,17 +18,11 @@ use Spryker\Glue\Kernel\AbstractFactory;
  */
 class GiftCardsRestApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\GiftCardsRestApi\Processor\Expander\GiftCardByQuoteResourceRelationshipExpanderInterface
-     */
     public function createGiftCardByQuoteResourceRelationshipExpander(): GiftCardByQuoteResourceRelationshipExpanderInterface
     {
         return new GiftCardByQuoteResourceRelationshipExpander($this->createGiftCardRestResponseBuilder());
     }
 
-    /**
-     * @return \Spryker\Glue\GiftCardsRestApi\Processor\RestResponseBuilder\GiftCardRestResponseBuilderInterface
-     */
     public function createGiftCardRestResponseBuilder(): GiftCardRestResponseBuilderInterface
     {
         return new GiftCardRestResponseBuilder($this->getResourceBuilder());

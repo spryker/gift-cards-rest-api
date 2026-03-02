@@ -20,9 +20,6 @@ class GiftCardRestResponseBuilder implements GiftCardRestResponseBuilderInterfac
      */
     protected $restResourceBuilder;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     */
     public function __construct(RestResourceBuilderInterface $restResourceBuilder)
     {
         $this->restResourceBuilder = $restResourceBuilder;
@@ -60,13 +57,6 @@ class GiftCardRestResponseBuilder implements GiftCardRestResponseBuilderInterfac
         return $giftCardResources;
     }
 
-    /**
-     * @param string $parentResourceType
-     * @param string $parentResourceId
-     * @param string $giftCardCode
-     *
-     * @return string
-     */
     protected function getGiftCardsResourceSelfLink(
         string $parentResourceType,
         string $parentResourceId,
