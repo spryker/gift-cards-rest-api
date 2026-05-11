@@ -16,6 +16,10 @@
 
     <transfer name="GiftCard">
         <property name="code" type="string" description="A unique code, often for currency, country, or barcode."/>
+        <property name="value" type="int" description="A generic value for a property, often used in key-value pairs or translations."/>
+        <property name="currencyIsoCode" type="string" description="The ISO code for a currency."/>
+        <property name="actualValue" type="int" description="The rest amount assigned to a gift card"/>
+        <property name="isActive" type="bool" description="A boolean flag indicating if an entity is currently active."/>
     </transfer>
 
     <transfer name="QuoteUpdateRequestAttributes">

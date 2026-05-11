@@ -1,0 +1,68 @@
+resource:
+    name: GiftCards
+    shortName: gift-cards
+    description: 'Gift cards applied to a cart'
+
+    paginationEnabled: false
+
+    includableIn:
+        - resource: Carts
+          relationshipName: gift-cards
+        - resource: GuestCarts
+          relationshipName: gift-cards
+
+    properties:
+        code:
+            type: string
+            identifier: true
+            writable: false
+            readable: true
+            required: false
+            description: 'Gift card code'
+            openapiContext:
+                example: 'GIFT-2024-XYZ'
+
+        name:
+            type: string
+            writable: false
+            readable: true
+            required: false
+            description: 'Human-readable gift card name shown to the customer in the cart and on the order summary.'
+            openapiContext:
+                example: 'Gift Card 50 EUR'
+
+        value:
+            type: integer
+            writable: false
+            readable: true
+            required: false
+            description: 'Original face value of the gift card in cents (e.g. `5000` for a €50.00 card). Stays constant for the lifetime of the gift card.'
+            openapiContext:
+                example: 5000
+
+        currencyIsoCode:
+            type: string
+            writable: false
+            readable: true
+            required: false
+            description: 'ISO 4217 currency code that `value` and `actualValue` are denominated in.'
+            openapiContext:
+                example: 'EUR'
+
+        actualValue:
+            type: integer
+            writable: false
+            readable: true
+            required: false
+            description: 'Remaining redeemable balance in cents after previous partial redemptions (e.g. `3500` if €15.00 of a €50.00 card has already been used). Equals `value` for an unused gift card.'
+            openapiContext:
+                example: 3500
+
+        isActive:
+            type: boolean
+            writable: false
+            readable: true
+            required: false
+            description: 'Whether the gift card can still be redeemed. `false` once `actualValue` reaches zero or after the card has been deactivated by an admin.'
+            openapiContext:
+                example: true
