@@ -5,12 +5,6 @@ resource:
 
     paginationEnabled: false
 
-    includableIn:
-        - resource: Carts
-          relationshipName: gift-cards
-        - resource: GuestCarts
-          relationshipName: gift-cards
-
     properties:
         code:
             type: string
