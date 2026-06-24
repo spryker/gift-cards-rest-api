@@ -12,6 +12,8 @@ use Spryker\Glue\Kernel\AbstractBundleConfig;
 class GiftCardsRestApiConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @uses \Spryker\Glue\CartsRestApi\CartsRestApiConfig::RESOURCE_CARTS
      *
      * @var string
@@ -19,11 +21,15 @@ class GiftCardsRestApiConfig extends AbstractBundleConfig
     public const RESOURCE_CARTS = 'carts';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const RESOURCE_GIFT_CARDS = 'gift-cards';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Glue\CartCodesRestApi\CartCodesRestApiConfig::RESOURCE_CART_CODES,
      *
      * @var string
